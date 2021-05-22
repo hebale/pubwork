@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../res/css/core.css">
+    <link rel="stylesheet" href="../../res/css/default.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- script -->
+    <script src="./js/script.js"></script>
+    <script src="../../res/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="desc">
+            <h4>타이틀</h4>
+            <p>디스크립션</p>
+        </div>
+
+        <div class="ex">
+            <pre>
+                <code class="javascript">
+
+var breakPoint      =       1280; // mobile < 1280 <= pc
+
+/******************************/
+(function(_this){
+    var _view = {
+        init : function(){
+
+        },
+        platform : function(){
+            if( $(window).outerWidth() > breakPoint ){
+                return "pc"
+            }else{
+                return "mobile"
+            }
+        }
+    };
+
+    var _layout = {
+        init        : function(){
+            _layout.gnb();
+            _layout.lnb();
+            _layout.dim();
+            _layout.popup();
+        },
+
+        update      : function(){},
+        gnb         : function(){},
+        lnb         : function(){},
+        dim         : function(){},
+        popup       : function(){},
+        overflow    : function(){},
+    };
+
+    var _ui = {
+        init        : function(){
+            _ui.input();
+            _ui.select();
+            _ui.table();
+            _ui.tab();
+            _ui.switch();
+            _ui.accordion();
+            _ui.tree();
+            _ui.tooltip();
+            _ui.floating();
+            _ui.sticky();
+        },
+        update      : function(param){
+            if( param == undefined ){
+                _ui.innit();
+            }else{
+                // 개별업데이트기능 추가예정
+            }
+        },
+
+        /* component */
+        input       : function(){},
+        select      : function(){},
+        table       : function(){},
+
+        /* interface */
+        tab         : function(){},
+        switch      : function(){},
+        accordion   : function(){},
+        tree        : function(){},
+        tooltip     : function(){},
+        floating    : function(){},
+        sticky      : function(){},
+    };
+
+    _this._view     =   _view;
+    _this._layout   =   _layout;
+    _this.ui        =   _ui;
+})(this)
+
+
+                </code>
+            </pre>
+        </div>
+    </div>
+</body>
+</html>
