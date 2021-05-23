@@ -3,16 +3,11 @@ $(function(){
     textShadow('.title');
 })
 
-
-
-
-
-
 // 타이틀
 var textShadow = function(target){
     var $this = $(target),
-        shaColor = "tomato",
-        shaLen = 50,
+        shaColor = "#ddd",
+        shaLen = 20,
         textSha = "";
 
     for( var i =0; i < shaLen; i++){

@@ -16,16 +16,14 @@
 </head>
 <body>
     <div class="wrap">
-        <div class="desc">
-            <h4>타이틀</h4>
-            <p>디스크립션</p>
-        </div>
+        <h2>JAVASCRIPT</h2>
+        <h4>※ 제작중인 스크립트가이드</h4>
+        <div class="ex_box">
+            <div class="ex_code" data-comment="Vanila Javascript">
+                <pre>
+                    <code class="javascript">
 
-        <div class="ex">
-            <pre>
-                <code class="javascript">
-
-var breakPoint      =       1280; // mobile < 1280 <= pc
+var breakPoint      =       1280; // mobile &lt; 1280 &lt;= pc
 
 /******************************/
 (function(_this){
@@ -34,7 +32,7 @@ var breakPoint      =       1280; // mobile < 1280 <= pc
 
         },
         platform : function(){
-            if( $(window).outerWidth() > breakPoint ){
+            if( window.innerWidth > breakPoint ){
                 return "pc"
             }else{
                 return "mobile"
@@ -94,14 +92,25 @@ var breakPoint      =       1280; // mobile < 1280 <= pc
         sticky      : function(){},
     };
 
-    _this._view     =   _view;
-    _this._layout   =   _layout;
-    _this.ui        =   _ui;
+    _this._view     =   _view;      // 화면정보
+    _this._layout   =   _layout;    // 화면이벤트
+    _this.ui        =   _ui;        // 컴포넌트&인터페이스
 })(this)
+                    </code>
+                </pre>
+            </div>
+            <div class="ex_front">
+                <pre>
+<b>설명,</b>
+스크립트를 플러그인화하여 호출사용방법으로 제작중
 
+사용방법,
+_view.platform();                   //  "pc" or "mobile"
+_ui.update();                       //  비동기 컴포넌트 업데이트
+_layout.popup.update(selector);     //  특정팝업 업데이트
 
-                </code>
-            </pre>
+                </pre>
+            </div>
         </div>
     </div>
 </body>
